@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#020617" />
+  <title>Akshay Kudtarkar | Full Stack Software Engineer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Akshay Kudtarkar – Full Stack Software Engineer specializing in .NET Core, Angular, Kafka, and scalable config-driven systems." />
+  <meta name="keywords" content="Akshay Kudtarkar, Full Stack Engineer, .NET Core Developer, Microservices, Kafka, Angular, Software Engineer Mumbai" />
+  <meta name="author" content="Akshay Kudtarkar" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Akshay Kudtarkar | Full Stack Software Engineer" />
+  <meta property="og:description" content="Premium developer portfolio showcasing scalable backend systems and full‑stack engineering." />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Akshay Kudtarkar",
+    "jobTitle": "Full Stack Software Engineer",
+    "address": {"@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "India"},
+    "email": "mailto:akshaykudtarkar.work@gmail.com",
+    "sameAs": ["https://linkedin.com/in/akshaykudtarkar"]
+  }
+    const toggle = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'light') {
+    document.body.classList.add('light');
+    toggle.textContent = '☀️ Light';
+  } else {
+    toggle.textContent = '🌙 Dark';
+  }
+
+  toggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light');
+    toggle.textContent = isLight ? '☀️ Light' : '🌙 Dark';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+</script>
+
+  <style>
+    /* Lighthouse optimizations */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    :root {
+      --bg: #020617;
+      --panel: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--panel);
+      border-bottom: 1px solid #1e293b;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 1rem 1.5rem;
+      max-width: 1200px;
+      margin-inline: auto;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 1rem;
+      }
+      nav ul.open {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+        padding: 1rem 1.5rem;
+      }
+    }
+
+    nav a { color: var(--muted); text-decoration: none; font-weight: 500; }
+    nav a:hover { color: var(--accent); }
+
+    header {
+      padding: clamp(4rem, 8vw, 6rem) 1.25rem clamp(3rem, 6vw, 5rem);
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: auto;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible { opacity: 1; transform: translateY(0); }
+
+    h2 { color: var(--accent); margin-bottom: 1rem; }
+    h3 { margin-bottom: 0.2rem; }
+
+    .skills span {
+      display: inline-block;
+      padding: 0.45rem 0.8rem;
+      margin: 0.3rem;
+      border-radius: 8px;
+      border: 1px solid #1e293b;
+      background: #020617;
+      font-size: 0.9rem;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      border-top: 1px solid #1e293b;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+      .toggle {
+      position: fixed;
+      right: 1.2rem;
+      bottom: 1.2rem;
+      background: var(--panel);
+      border: 1px solid #1e293b;
+      border-radius: 999px;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    body.light {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #020617;
+      --muted: #475569;
+      --accent: #0284c7;
+      background: #f8fafc;
+      color: var(--text);
+    }
+
+    body.light nav {
+      background: rgba(255,255,255,0.85);
+    }
+
+    body.light .card,
+    body.light .skills span {
+      background: #ffffff;
+    }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="hamburger" id="menuToggle">☰</div>
+  <ul id="navMenu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Akshay Kudtarkar</h1>
+  <p>Full Stack Software Engineer · Building scalable, config‑driven systems with .NET, Angular & Kafka</p>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Full Stack Software Engineer with 2+ years of experience designing and building scalable web platforms using
+    .NET Core, Angular, Python, and microservice architectures. Known for config‑driven systems, Kafka pipelines,
+    and impactful supply‑chain visualizations.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <span>C#</span><span>.NET Core</span><span>ASP.NET Web API</span><span>Microservices</span>
+    <span>Angular</span><span>JavaScript</span><span>Python</span><span>Kafka</span>
+    <span>MongoDB</span><span>Redis</span><span>SQL</span><span>Azure CI/CD</span>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>Software Engineer – GEP Worldwide</h3>
+    <p><em>2023 – Present</em></p>
+    <ul>
+      <li>Built config‑driven REST APIs reducing code changes by 50%</li>
+      <li>Delivered Excel bulk import/export APIs improving performance by 60%</li>
+      <li>Implemented Kafka services for real‑time supply & demand signals</li>
+      <li>Designed supply‑chain visualization tools recognized by leadership</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Associate Software Engineer – GEP Worldwide</h3>
+    <p><em>2023 – 2024</em></p>
+    <ul>
+      <li>System settings APIs with in‑memory caching (75% fewer DB calls)</li>
+      <li>Python + Databricks automation for supply‑chain route rendering</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Highlighted Projects</h2>
+  <ul>
+    <li><strong>Supply Planning Platform:</strong> Config‑driven microservices, Excel automation, Kafka integration</li>
+    <li><strong>SSO Authentication Integration:</strong> Seamless access between Cost Model platforms</li>
+    <li><strong>.NET Microservice Template:</strong> Reusable production‑ready service blueprint</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:akshaykudtarkar.work@gmail.com">akshaykudtarkar.work@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/akshaykudtarkar">linkedin.com/in/akshaykudtarkar</a></p>
+</section>
+
+<button class="toggle" id="themeToggle">🌙 Dark</button>
+
+<footer>
+  © 2026 Akshay Kudtarkar · Premium Developer Portfolio
+</footer>
+
+<script defer>
+  // Section reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
+  // Theme toggle (FIXED)
+  const toggle = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'light') {
+    document.body.classList.add('light');
+    toggle.textContent = '☀️ Light';
+  } else {
+    toggle.textContent = '🌙 Dark';
+  }
+
+  toggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light');
+    toggle.textContent = isLight ? '☀️ Light' : '🌙 Dark';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+
+  // Mobile hamburger menu
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
